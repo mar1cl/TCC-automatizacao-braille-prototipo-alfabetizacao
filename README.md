@@ -3,6 +3,7 @@
 Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) com o objetivo de automatizar a representação de caracteres do sistema Braille utilizando microcontrolador ESP32 e micro servomotores.
 
 Projeto aprovado com nota máxima – 2025.
+
 ** Este repositório ainda esta sendo alimentado e atualizado com todos os documentos!
 ---
 
