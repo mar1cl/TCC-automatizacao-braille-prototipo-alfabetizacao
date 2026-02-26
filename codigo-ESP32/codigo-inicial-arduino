@@ -1,0 +1,139 @@
+// tradução do alfabeto pra celula braille com servo motor
+
+#include <Servo.h>
+
+//conta os servos (0) e relaciona com a porta
+	Servo servo[6]; 
+	const int servoPins[6] = {2,3,4,5,6,7}; 
+//mapeando corretamente as posições:
+	const int mapeamento[6] = {0,2,4,1,3,5};
+
+//biblioteca/struct de definição letra -> pino
+
+  struct letraBraille {
+    
+    char letra;
+    int posicoes[6];		//quais serão levantados
+    int tamanho;			//quantos serão usados
+  };
+  
+  const letraBraille bMap[] = {         //mapa da struct
+    
+    // letra, {posição}, tamanho} 
+  {'a', {0}, 1},
+  {'b', {0, 1}, 2},
+  {'c', {0, 3}, 2},
+  {'d', {0, 3, 4}, 3},
+  {'e', {0, 4}, 2},
+  {'f', {0, 1, 3}, 3},
+  {'g', {0, 1, 3, 4}, 4},
+  {'h', {0, 1, 4}, 3},
+  {'i', {1, 3}, 2},
+  {'j', {1, 3, 4}, 3},
+  {'k', {0, 2}, 2},
+  {'l', {0, 1, 2}, 3},
+  {'m', {0, 2, 3}, 3},
+  {'n', {0, 2, 3, 4}, 4},
+  {'o', {0, 2, 4}, 3},
+  {'p', {0, 1, 2, 3}, 4},
+  {'q', {0, 1, 2, 3, 4}, 5},
+  {'r', {0, 1, 2, 4}, 4},
+  {'s', {1, 2, 3}, 3},
+  {'t', {1, 2, 3, 4}, 4},
+  {'u', {0, 2, 5}, 3},
+  {'v', {0, 1, 2, 5}, 4},
+  {'w', {1, 3, 4, 5}, 4},
+  {'x', {0, 2, 3, 5}, 4},
+  {'y', {0, 2, 3, 4, 5}, 5},
+  {'z', {0, 2, 4, 5}, 4},
+  {'numero', {2,3,4,5}, 4},
+  {'0', {1,3,4}, 3},
+  {'1', {0}, 1}, 
+  {'2', {0,1}, 2},
+  {'3', {0,3}, 2},
+  {'4', {0,3,4}, 3},
+  {'5', {0,4}, 2},
+  {'6', {0,1,3}, 3},
+  {'7', {0,1,3,4}, 4},
+  {'8', {0,1,4}, 3},
+  {'9', {1,3}, 2}
+   };
+  
+  //calcular a qntd de letras no mapa
+  const int tamanhoMapa = sizeof(bMap) / sizeof(bMap[0]);
+
+
+  // função para acionar os servos e definir os graus
+  void acionaServo(const int indices[], int tamanho){
+    for (int i = 0; i < tamanho; i++){
+      int id = indices[i];
+      
+      if (id >= 0 && id < 6){
+       int idfisico = mapeamento[id]; 
+        servo[idfisico].write(45);    // sobe a 45 graus
+      }
+    }
+    
+    delay(5000);    //segura por 5s
+    
+    for (int i = 0; i < tamanho; i++){
+      int id = indices[i];
+      
+      if (id >= 0 && id <6){
+        int idfisico = mapeamento[id];
+        servo[idfisico].write(0);       // desce a haste
+        
+      }
+    }
+    Serial.println("Letra exibida");
+  }
+
+
+//função para procurar a letra                                         
+void  procurarLetra (char letra){
+    for (int i = 0; i < tamanhoMapa; i++){
+      
+      if (bMap[i].letra == letra){
+        acionaServo(bMap[i].posicoes, bMap[i].tamanho);
+      	
+        return;
+      }
+    }
+    	Serial.println("Letra invalida");
+  }
+  
+
+void setup(){
+  Serial.begin(9600);
+  
+  for (int i = 0; i < 6; i++){
+    servo[i].attach(servoPins[i]);
+    servo[i].write(0);    // posição inicial de 0 graus
+  }
+  Serial.println("Digite uma letra minuscula (a-z)");
+}
+
+void loop(){
+  if (Serial.available() > 0){
+    
+   //pega o caracter digitado e verifica se é minusuclo
+   char letra = Serial.read();
+     if (letra == 'esc'){
+ 	 Serial.println("Encerrado.");
+     while(true); 
+     }
+    
+    if (letra >= 'a' && letra <= 'z'){
+       Serial.println("Letra digitada: ");
+       Serial.println(letra);
+      
+       //função onde o comando sera executado
+      procurarLetra(letra);
+    }
+    else {
+      Serial.println("Nao eh minuscula, por favor, digite novamente");
+    }
+    Serial.println("Digite outra letra ou aperte ESC para sair");
+  }
+}  
+    
