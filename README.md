@@ -86,6 +86,4 @@ Orientador: Prof Me. André Giovanni Castaldini
 
 Trabalho de Conclusão de Curso – 2025
 
-
-O protótipo integra automação, programação embarcada e tecnologia assistiva, demonstrando a aplicação prática de sistemas embarcados no desenvolvimento de soluções inclusivas.
-Este repositório tem fins acadêmicos e demonstrativos.
+Integrando automação, tecnologia assistiva e programação embarcada este projeto traz o desenvolviemnto de uma opção viável para subrir as necessidades de materias do sistema Braille. Este repositório tem fins acadêmicos e demonstrativos.
