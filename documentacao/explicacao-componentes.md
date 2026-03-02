@@ -1,6 +1,6 @@
 Projeto: Automatização do Sistema Braille  
 Autoras: Maria Clara de Andrade e Hanela Ribeiro  
-Orientador: André Giovanni Castaldini
+Orientador: Prof. Me. André Giovanni Castaldini
 
 Ano: 2025  
 
