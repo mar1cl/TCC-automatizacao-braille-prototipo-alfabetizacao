@@ -7,14 +7,14 @@ Projeto aprovado com nota máxima – 2025.
 ** Este repositório ainda esta sendo alimentado e atualizado com todos os documentos!
 ---
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 O projeto propõe o desenvolvimento de um protótipo que seja capaz de fazer a representação física de uma célula Braille através de uma placa controladora e seis micro servomotores.
 O circuito recebe via Bluetooth ou serial os dados enviados por um aplicativo e o código-fonte faz a conversão dos caracteres dos Português para a sua representação no sistema Braille. 
 
 A proposta deste trabalho é auxiliar o processo da alfabetização de deficiêntes visuais no sistema Braille através do protótipo desenvolvido, utilizando tecnologia acessível e de vaixo custo.
 
 
-## 🎯 Objetivo
+## Objetivo
 
 - Modelar o display para a impressão 3D;
 - Desenvolver um circuito de automação funcional utilizando ESP32 e servomotores;
@@ -24,7 +24,7 @@ A proposta deste trabalho é auxiliar o processo da alfabetização de deficiên
 
 
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - ESP32
 - Linguagem Python/ C++
@@ -34,16 +34,8 @@ A proposta deste trabalho é auxiliar o processo da alfabetização de deficiên
 - Thinkercad e Wokwi (simulação)
 
 
-## 🔧 Componentes de Hardware
 
-- 1x ESP32  
-- 6x Micro servomotores  
-- Protoboard  
-- Cabos jumper  
-- Fonte de alimentação  
-
-
-## ⚙️ Funcionamento do Sistema
+## Funcionamento do Sistema
 
 1. O usuário envia um caractere via Bluetooth ou Serial.
 2. O ESP32 identifica o padrão Braille correspondente.
@@ -56,7 +48,7 @@ representa-se um caractere do Braille na célula.
 
 ---
 
-## 📁 Estrutura do Repositório
+## Estrutura do Repositório
 documentacao/
 ├── componentes-hardware.md
 ├── esquema-eletrico.png
@@ -67,7 +59,7 @@ codigo/
 
 ---
 
-## 🖼 Imagens do Projeto
+## Imagens do Projeto
 
 ### Simulação no Thinkercad
 <img width="947" height="529" alt="arduinotg" src="https://github.com/user-attachments/assets/16ba17f1-fade-496f-999f-3739705a4108" />
@@ -76,7 +68,7 @@ codigo/
 <img width="344" height="459" alt="image" src="https://github.com/user-attachments/assets/f8a97546-5471-4f54-a982-bea3f185efec" />
 
 
-## 📚 Documentação Completa
+## Documentação Completa
 
 A documentação detalhada do projeto pode ser encontrada na pasta `documentacao`, incluindo:
 
@@ -86,7 +78,7 @@ A documentação detalhada do projeto pode ser encontrada na pasta `documentacao
 
 ---
 
-## 👩‍💻 Autoras
+## Autoria
 
 Maria Clara de Andrade  
 Hanela Ribeiro  
@@ -94,9 +86,6 @@ Orientador: Prof Me. André Giovanni Castaldini
 
 Trabalho de Conclusão de Curso – 2025
 
----
-
-## 🚀 Considerações Finais
 
 O protótipo integra automação, programação embarcada e tecnologia assistiva, demonstrando a aplicação prática de sistemas embarcados no desenvolvimento de soluções inclusivas.
 Este repositório tem fins acadêmicos e demonstrativos.
