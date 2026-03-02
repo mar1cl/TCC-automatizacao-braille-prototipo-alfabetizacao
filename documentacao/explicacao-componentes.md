@@ -1,5 +1,6 @@
 Projeto: Automatização do Sistema Braille  
 Autoras: Maria Clara de Andrade e Hanela Ribeiro  
+Orientador: André Giovanni Castaldini
 Ano: 2025  
 
 ---
@@ -22,9 +23,9 @@ O ESP32 é o controlador principal do projeto, sendo responsável pelo envio dos
 - Controlar os servomotores por meio de sinais elétricos;
 - Executar a lógica implementada no código-fonte.
 
-⭐ A escolha do ESP32 se deve à sua conectividade integrada, permitindo o uso de Bluetooth sem a necessidade de conexão com rede Wi-Fi.
+A escolha do ESP32 se deve à sua conectividade integrada, permitindo o uso de Bluetooth sem a necessidade de conexão com rede Wi-Fi.
 
----
+
 
 ## ⚙️ 2. Micro servomotores
 
@@ -36,7 +37,7 @@ Os seis atuam conjuntamente para possibilitar a representação de uma única c�
 - Levantar ou abaixar os pinos físicos do dispositivo;
 - Representar letras por meio da combinação dos 6 pontos do sistema Braille.
 
----
+
 
 ## 📡 3. Módulo Bluetooth (integrado ao ESP32)
 
@@ -46,7 +47,7 @@ O Bluetooth, integrado ao ESP32, permite a comunicação entre o dispositivo e o
 - Receber caracteres enviados pelo aplicativo;
 - Acionar os servomotores de acordo com o caractere recebido.
 
----
+
 
 ## 🔌 4. Fonte de Alimentação
 
@@ -58,13 +59,13 @@ Ela é responsável por fornecer energia para:
 
 É fundamental que a fonte possua corrente suficiente para alimentar todos os servomotores simultaneamente, garantindo o funcionamento estável do sistema.
 
----
+
 
 ## 🧩 5. Protoboard e Jumpers
 
 A protoboard e os cabos jumper foram utilizados para realizar as conexões entre os componentes de forma organizada, segura e sem a necessidade de soldagem.
 
----
+
 
 # 🖼 Esquema Elétrico
 
@@ -72,7 +73,7 @@ O esquema elétrico completo do projeto pode ser visualizado no arquivo:
 
 `esquema-eletrico.png`
 
-🎯 O esquema apresentado foi desenvolvido na plataforma Thinkercad, onde a simulação foi realizada utilizando uma placa Arduino.
+O esquema apresentado foi desenvolvido na plataforma Thinkercad, onde a simulação foi realizada utilizando uma placa Arduino.
 
 Após análise técnica do projeto, optou-se pela utilização da placa ESP32 no protótipo físico, por apresentar maior conectividade, melhor desempenho e 
 integração nativa com Bluetooth, além de oferecer maior portabilidade ao sistema.
