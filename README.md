@@ -1,6 +1,6 @@
 # Automatização do Sistema Braille com ESP32
 
-Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) com o objetivo de automatizar a representação de caracteres do sistema Braille utilizando microcontrolador ESP32 e micro servomotores.
+Este projeto foi desenvolvido para o Trabalho de Conclusão de Curso (TCC), e teve como o objetivo a automatização do sistema Braille, ou seja, automatizar a representação de caracteres do sistema Braille utilizando microcontrolador ESP32 e micro servomotores.
 
 Projeto aprovado com nota máxima – 2025.
 
@@ -8,25 +8,21 @@ Projeto aprovado com nota máxima – 2025.
 ---
 
 ## 📖 Sobre o Projeto
+O projeto propõe o desenvolvimento de um protótipo que seja capaz de fazer a representação física de uma célula Braille através de uma placa controladora e seis micro servomotores.
+O circuito recebe via Bluetooth ou serial os dados enviados por um aplicativo e o código-fonte faz a conversão dos caracteres dos Português para a sua representação no sistema Braille. 
 
-Este projeto propõe o desenvolvimento de um dispositivo automatizado capaz de representar fisicamente uma célula Braille por meio da movimentação de seis micro servomotores.
+A proposta deste trabalho é auxiliar o processo da alfabetização de deficiêntes visuais no sistema Braille através do protótipo desenvolvido, utilizando tecnologia acessível e de vaixo custo.
 
-O sistema recebe caracteres via comunicação Serial ou Bluetooth e converte cada letra ou número em sua respectiva combinação de pontos no padrão Braille Grau 1.
-
-A proposta busca contribuir como ferramenta auxiliar no processo de alfabetização de pessoas com deficiência visual, utilizando tecnologia acessível e de baixo custo.
-
----
 
 ## 🎯 Objetivo
 
-Desenvolver um protótipo funcional capaz de:
+- Modelar o display para a impressão 3D;
+- Desenvolver um circuito de automação funcional utilizando ESP32 e servomotores;
+- Desenvolver o código-fonte para fazer a conversão correta dos caracteres para a represetação em Braille;
+- Desenvolver um aplicativo mobile acessivel que faça o envio dos caracteres para a tradução;
+- Fazer a integração dos componentes e garantir o funcionamento.
 
-- Receber caracteres via Bluetooth;
-- Converter caracteres para o padrão Braille;
-- Acionar mecanicamente os pontos da célula Braille;
-- Retornar automaticamente à posição inicial após a leitura tátil.
 
----
 
 ## 🛠 Tecnologias Utilizadas
 
@@ -35,9 +31,8 @@ Desenvolver um protótipo funcional capaz de:
 - Biblioteca ESP32Servo
 - Biblioteca BluetoothSerial
 - Comunicação Bluetooth (SPP)
-- Thinkercad (simulação inicial)
+- Thinkercad e Wokwi (simulação)
 
----
 
 ## 🔧 Componentes de Hardware
 
@@ -47,7 +42,6 @@ Desenvolver um protótipo funcional capaz de:
 - Cabos jumper  
 - Fonte de alimentação  
 
----
 
 ## ⚙️ Funcionamento do Sistema
 
@@ -81,7 +75,6 @@ codigo/
 ### Protótipo Físico com ESP32
 <img width="344" height="459" alt="image" src="https://github.com/user-attachments/assets/f8a97546-5471-4f54-a982-bea3f185efec" />
 
----
 
 ## 📚 Documentação Completa
 
@@ -97,6 +90,7 @@ A documentação detalhada do projeto pode ser encontrada na pasta `documentacao
 
 Maria Clara de Andrade  
 Hanela Ribeiro  
+Orientador: Prof Me. André Giovanni Castaldini
 
 Trabalho de Conclusão de Curso – 2025
 
